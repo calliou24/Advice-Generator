@@ -1,0 +1,103 @@
+.advice {
+  background-color: var(--dark-grayish);
+  width: 95%;
+  min-height: 340px;
+  max-width: 500px;
+  margin: auto;
+  padding: 60px 20px;
+  border-radius: 10px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.adviceText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+  overflow: hidden;
+}
+
+.text {
+  text-align: center;
+  font-size: 28px;
+  color: var(--light-cyan);
+}
+
+.adviceNum {
+  color: var(--neon-green);
+  letter-spacing: 3px;
+  font-size: .7rem;
+}
+
+.pattern {
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.btn {
+  position: absolute;
+  bottom: -35px;
+  background-image: url(../../assets/images/icon-dice.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  width: 70px;
+  height: 70px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: var(--neon-green);
+  animation: button .3s linear;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0 0 30px 0 var(--neon-green);
+  animation: buttonHover .3s linear;
+}
+
+.loading {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #0008;
+  /* Light grey */
+  border-top: 2px solid #fff;
+  /* Black */
+  border-radius: 50%;
+  animation: spinner .4s linear infinite;
+}
+
+@keyframes buttonHover {
+  from {
+    transform: rotate(360deg)
+  }
+
+  to {
+    transform: rotate(0deg)
+  }
+}
+
+
+@keyframes button {
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
